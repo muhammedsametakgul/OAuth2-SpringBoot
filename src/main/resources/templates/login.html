@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet"> <!-- CSS dosyasını dahil ediyoruz -->
+</head>
+<body>
+<div class="login-container">
+    <h2>Login to Your Account</h2>
+    <form method="post" action="/login">
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    <div class="oauth-login">
+        <p>Or login with:</p>
+        <a th:href="@{/oauth2/authorization/github}" class="btn-oauth">Login with GitHub</a>
+    </div>
+</div>
+</body>
+</html>
